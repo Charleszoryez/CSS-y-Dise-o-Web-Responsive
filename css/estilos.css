@@ -1,8 +1,12 @@
+*{
+  margin: 0;
+}
 body{
   font-family: 'Dancing Script';
   background-color: #02010a;
   color: white;
 	font-size: 16px;
+  font-size: 14pt;
 }
 #contenido{
   width: 900px;
@@ -19,18 +23,30 @@ header{
   flex-flow: row wrap;
   -webkit-flex-flow: row wrap;
  }
-.titulo{
-  color: white;
-  text-shadow: 2px 2px 2px  #02010a
+#tituloCabecera{
+  width: 70%;
+  text-indent: 15px;
 }
-nav{
-  margin-left: 80%;
+#menu{
+  width: 30%;
+  font-size: 18pt;
+}
+#menu a, #menu a:hover{
+  color: #fff;
+  padding: 5px 10px;
+}
+#menu a + a::before{
+  color: #fff;
+  text-decoration:none;
+}
+#menu .actual{
+  text-decoration:none;
 }
 #imagen_central{
   background: #82c3a6;
   padding: 20px;
 }
-img{
+ img{
   width: 100%;
 }
 #imagen_secundaria{
@@ -47,4 +63,86 @@ img{
   text-align: center;
   box-sizing: border-box;
   padding: 0 15px;
+}
+.imgPaisaje{
+  border: 2px solid black;
+  -webkit-filter:drop-shadow(3px 3px 6px #82c3a6);
+  filter: drop-shadow(3px 3px 6px  #82c3a6);
+  transition: transform 2s;
+}
+.imgPaisaje:hover{
+  transform: rotate(10deg);
+}
+.imgRetrato{
+  border: 2px solid black;
+  -webkit-filter:drop-shadow(3px 3px 6px #82c3a6);
+  filter: drop-shadow(3px 3px 6px  #82c3a6);
+  transition: transform 2s;
+
+}
+.imgRetrato:hover{
+  transform: translate(20px, -5px);
+
+}
+footer{
+  background-color: #C6d5c5;
+  border-radius: 0 0 10px 10px;
+  color: black;
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  padding: 15px 0;
+  }
+footer .columna{
+    width: 25%;
+    box-sizing: border-box;
+    padding: 0 15px;
+  }
+.icono{
+  width: 15px;
+}
+
+.columnaGaleria{
+  width: 33.33%;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.img1{
+  -webkit-filter:blur(10px);
+}
+.img2{
+  -webkit-filter:grayscale(100%);
+}
+.img3{
+  -webkit-filter:sepia(90%);
+}
+.img4{
+  -webkit-filter:grayscale(100%);
+}
+.img5{
+
+}
+.img6{
+  -webkit-filter:grayscale(100%);
+}
+@media screen and (max-width: 1000px) {
+  #contenido{
+    width: 100%;
+    margin: 0 auto;
+  }
+  #menu, #tituloCabecera{
+    width: 100%;
+    text-align: center;
+  }
+  .img_Secundaria{
+    width: 100%;
+  }
+  .columnaGaleria{
+    width: 100%;
+  }
+  footer .columna{
+    width: 100%;
+  }
 }
